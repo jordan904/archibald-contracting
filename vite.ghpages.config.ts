@@ -15,9 +15,9 @@ export default defineConfig({
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
-  base: "/archibald/",
+  base: "/archibald-contracting/",
   build: {
-    outDir: path.resolve(import.meta.dirname, "../gh-pages-clean"),
+    outDir: path.resolve(import.meta.dirname, "dist/gh-pages"),
     emptyOutDir: true,
   },
 });
