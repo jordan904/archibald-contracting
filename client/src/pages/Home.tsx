@@ -430,8 +430,26 @@ export default function Home() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* Intercept anchor links so they scroll instead of conflicting with hash router */
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement).closest("a[href^='#']");
+      if (!link) return;
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") return;
+      const target = document.getElementById(hash.substring(1));
+      if (target) {
+        e.preventDefault();
+        e.stopPropagation();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    document.addEventListener("click", handler, true);
+    return () => document.removeEventListener("click", handler, true);
   }, []);
 
   return (
@@ -462,7 +480,7 @@ export default function Home() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">
             <a
-              href="/#/"
+              href="/archibald-contracting/#/"
               className="relative text-sm text-brand-forest-light/80 hover:text-brand-forest-light transition-colors font-medium tracking-wide uppercase group flex items-center gap-1"
             >
               Sylvan Homes
@@ -510,7 +528,7 @@ export default function Home() {
             >
               <nav className="container py-6 flex flex-col gap-4">
                 <motion.a
-                  href="/#/"
+                  href="/archibald-contracting/#/"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0 }}
@@ -1112,7 +1130,7 @@ export default function Home() {
                   </a>
                 ))}
                 <a
-                  href="/#/"
+                  href="/archibald-contracting/#/"
                   className="block text-brand-forest-light/60 hover:text-brand-forest-light transition-colors text-sm hover:translate-x-1 transform duration-200"
                 >
                   Sylvan Mini Home Sales

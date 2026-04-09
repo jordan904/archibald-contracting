@@ -363,6 +363,24 @@ export default function SylvanHomes() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* Intercept anchor links so they scroll instead of conflicting with hash router */
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement).closest("a[href^='#']");
+      if (!link) return;
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") return;
+      const target = document.getElementById(hash.substring(1));
+      if (target) {
+        e.preventDefault();
+        e.stopPropagation();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    document.addEventListener("click", handler, true);
+    return () => document.removeEventListener("click", handler, true);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       {/* --- NAVIGATION --- */}
@@ -401,7 +419,7 @@ export default function SylvanHomes() {
               </a>
             ))}
             <a
-              href="/#/contracting"
+              href="/archibald-contracting/#/contracting"
               className="relative text-sm text-brand-orange/80 hover:text-brand-orange transition-colors font-medium tracking-wide uppercase group flex items-center gap-1"
             >
               Contracting
@@ -454,7 +472,7 @@ export default function SylvanHomes() {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="/#/contracting"
+                  href="/archibald-contracting/#/contracting"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
@@ -484,8 +502,8 @@ export default function SylvanHomes() {
           />
         </motion.div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-brand-dark/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/60 to-transparent" />
 
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
 
@@ -1080,7 +1098,7 @@ export default function SylvanHomes() {
                   </a>
                 ))}
                 <a
-                  href="/#/contracting"
+                  href="/archibald-contracting/#/contracting"
                   className="block text-brand-orange/60 hover:text-brand-orange transition-colors text-sm hover:translate-x-1 transform duration-200"
                 >
                   Archibald Contracting
