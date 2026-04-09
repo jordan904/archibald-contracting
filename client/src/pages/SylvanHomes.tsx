@@ -811,13 +811,17 @@ export default function SylvanHomes() {
                 />
                 <div className="absolute -inset-3 border-2 border-brand-forest/20 -z-10" />
 
-                <motion.div
+                <motion.a
+                  href="https://www.ironwoodhomesinc.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ ...springTransition, delay: 0.4 }}
                   className="absolute -bottom-6 -right-4 lg:-right-8 bg-gradient-to-br from-brand-forest to-brand-forest-light p-6
-                             shadow-[0_16px_40px_-8px_rgba(30,80,60,0.5)]"
+                             shadow-[0_16px_40px_-8px_rgba(30,80,60,0.5)] hover:shadow-[0_20px_50px_-8px_rgba(30,80,60,0.6)]
+                             hover:-translate-y-1 transition-all duration-300 block"
                 >
                   <span className="font-[family-name:var(--font-display)] text-xl text-white block">
                     Ironwood
@@ -825,7 +829,7 @@ export default function SylvanHomes() {
                   <span className="text-white/80 text-sm font-[family-name:var(--font-mono)] tracking-wider uppercase">
                     Authorized Dealer
                   </span>
-                </motion.div>
+                </motion.a>
               </div>
             </SlideIn>
 
@@ -1102,6 +1106,14 @@ export default function SylvanHomes() {
                   className="block text-brand-orange/60 hover:text-brand-orange transition-colors text-sm hover:translate-x-1 transform duration-200"
                 >
                   Archibald Contracting
+                </a>
+                <a
+                  href="https://www.ironwoodhomesinc.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-white/60 hover:text-brand-forest-light transition-colors text-sm hover:translate-x-1 transform duration-200"
+                >
+                  Ironwood Homes
                 </a>
               </nav>
             </div>
