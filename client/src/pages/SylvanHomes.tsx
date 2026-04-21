@@ -19,7 +19,6 @@ import {
   MapPin,
   Clock,
   ChevronDown,
-  Home as HomeIcon,
   Shield,
   Wrench,
   TreePine,
@@ -35,8 +34,8 @@ import {
 } from "lucide-react";
 
 /* --- Image URLs (Ironwood Homes) --- */
-const HERO_IMG =
-  "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/3c560bdc-c29c-4cad-91a6-68d9254cbbb5/Craftsman+3.JPG";
+const HERO_IMG = "/Vista.webp";
+const LOGO_IMG = "/logo.png";
 const CRAFTSMAN_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/6d9ab074-aef7-4814-a8ea-b946de4c5f79/Craftsman+1.JPG";
 const PORCH_IMG =
@@ -55,8 +54,7 @@ const HERON_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/a8a0ed1f-79e4-4364-a9eb-469967b209d3/Heron_Black+Trim+-+Front+View.jpg";
 const CARLETON_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/c3868b5c-29ba-4084-84c6-a478efbad63e/Carleton+Front+%28Dark+Green_Beige+Trim%29.jpg";
-const KITCHEN2_IMG =
-  "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/e9a5aa88-bc10-4895-b203-811f3a1eb938/Kitchen+1.jpg";
+const KITCHEN2_IMG = "/newkitchen.jpg";
 const HUSTON_LIVING_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/51365321-76d6-4228-b42e-51680478521f/IW2030+Huston+Great+Room.jpg";
 
@@ -393,9 +391,13 @@ export default function SylvanHomes() {
       >
         <div className="container flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-forest to-brand-forest-light rounded-sm flex items-center justify-center shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.6)] transition-shadow duration-300">
-              <HomeIcon className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={LOGO_IMG}
+              alt="Sylvan Mini Home Sales logo"
+              width="44"
+              height="44"
+              className="w-11 h-11 rounded-full bg-white p-0.5 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.6)] transition-shadow duration-300"
+            />
             <div className="leading-tight">
               <span className="font-[family-name:var(--font-display)] text-white text-lg tracking-tight">
                 Sylvan
@@ -497,7 +499,7 @@ export default function SylvanHomes() {
         <motion.div className="absolute inset-0" style={{ y: heroY, scale: heroScale }}>
           <img
             src={HERO_IMG}
-            alt="Beautiful craftsman style modular home by Ironwood Homes"
+            alt="Vista model modular home exterior by Ironwood Homes"
             className="w-full h-full object-cover"
           />
         </motion.div>
@@ -788,7 +790,7 @@ export default function SylvanHomes() {
               <div className="relative">
                 <img
                   src={KITCHEN2_IMG}
-                  alt="Modern kitchen interior in an Ironwood modular home"
+                  alt="Modern kitchen with white shaker cabinets, stainless appliances, and quartz island in a new mini home"
                   className="w-full aspect-[4/3] object-cover shadow-[0_16px_60px_-12px_rgba(0,0,0,0.25)]"
                 />
                 <div className="absolute -inset-3 border-2 border-brand-forest/20 -z-10" />
@@ -1068,9 +1070,15 @@ export default function SylvanHomes() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand-forest to-brand-forest-light rounded-sm flex items-center justify-center shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)]">
-                  <HomeIcon className="w-5 h-5 text-white" />
-                </div>
+                <img
+                  src={LOGO_IMG}
+                  alt="Sylvan Mini Home Sales logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-12 h-12 rounded-full bg-white p-0.5 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)]"
+                />
                 <div className="leading-tight">
                   <span className="font-[family-name:var(--font-display)] text-white text-lg tracking-tight">
                     Sylvan
