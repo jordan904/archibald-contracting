@@ -505,8 +505,8 @@ export default function SylvanHomes() {
           />
         </motion.div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-brand-dark/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/25 to-transparent" />
 
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
 
@@ -525,7 +525,10 @@ export default function SylvanHomes() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 style={{ originX: 0 }}
               />
-              <span className="text-brand-forest-light font-[family-name:var(--font-mono)] text-sm tracking-widest uppercase">
+              <span
+                className="text-brand-forest-light font-[family-name:var(--font-mono)] text-sm tracking-widest uppercase"
+                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.5)" }}
+              >
                 Antigonish & Cape Breton, Nova Scotia
               </span>
             </motion.div>
@@ -535,6 +538,7 @@ export default function SylvanHomes() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl text-white leading-[1.1] mb-6"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.75), 0 6px 24px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.15)" }}
             >
               <span className="inline-block">Your Trusted</span>
               <br />
@@ -543,7 +547,7 @@ export default function SylvanHomes() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                style={{ textShadow: "0 4px 30px rgba(30,80,60,0.3)" }}
+                style={{ textShadow: "0 2px 4px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.55), 0 0 30px rgba(30,80,60,0.4), 0 1px 0 rgba(255,255,255,0.2)" }}
               >
                 Ironwood Dealer
               </motion.span>
@@ -553,7 +557,8 @@ export default function SylvanHomes() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="text-white/70 text-lg lg:text-xl max-w-xl mb-10 leading-relaxed"
+              className="text-white/95 text-lg lg:text-xl max-w-xl mb-10 leading-relaxed"
+              style={{ textShadow: "0 1px 2px rgba(0,0,0,0.75), 0 2px 12px rgba(0,0,0,0.55)" }}
             >
               High-quality, affordable mini and modular homes for individuals,
               families, and investors across Antigonish, Guysborough County,
