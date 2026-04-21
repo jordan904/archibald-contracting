@@ -519,19 +519,25 @@ export default function SylvanHomes() {
 
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
 
+        {/* Centered hero logo - sits below navbar, above the house */}
+        <motion.div
+          style={{ opacity: heroOpacity }}
+          className="absolute top-24 lg:top-28 left-1/2 -translate-x-1/2 z-20 pointer-events-none"
+        >
+          <motion.img
+            src={LOGO_IMG}
+            alt="Sylvan Mini Home Sales - Let Us Guide You Home, Est. 2023"
+            width="176"
+            height="176"
+            initial={{ opacity: 0, scale: 0.85, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="block w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-white p-2 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
+          />
+        </motion.div>
+
         <motion.div className="container relative z-10" style={{ opacity: heroOpacity }}>
           <div className="max-w-3xl">
-            <motion.img
-              src={LOGO_IMG}
-              alt="Sylvan Mini Home Sales - Let Us Guide You Home, Est. 2023"
-              width="192"
-              height="192"
-              initial={{ opacity: 0, scale: 0.85, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="block w-36 h-36 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 rounded-full bg-white p-2 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
-            />
-
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
