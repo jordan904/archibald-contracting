@@ -392,13 +392,15 @@ export default function SylvanHomes() {
       >
         <div className="container flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-3 group">
-            <img
-              src={LOGO_IMG}
-              alt="Sylvan Mini Home Sales logo"
-              width="44"
-              height="44"
-              className="w-11 h-11 rounded-full bg-white p-0.5 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.6)] transition-shadow duration-300"
-            />
+            <div className="w-11 h-11 rounded-full bg-white p-[1px] overflow-hidden shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.6)] transition-shadow duration-300 shrink-0">
+              <img
+                src={LOGO_IMG}
+                alt="Sylvan Mini Home Sales logo"
+                width="44"
+                height="44"
+                className="w-full h-full rounded-full object-cover scale-[1.15]"
+              />
+            </div>
             <div className="leading-tight">
               <span className="font-[family-name:var(--font-display)] text-white text-lg tracking-tight">
                 Sylvan
@@ -1108,15 +1110,17 @@ export default function SylvanHomes() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={LOGO_IMG}
-                  alt="Sylvan Mini Home Sales logo"
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-12 h-12 rounded-full bg-white p-0.5 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)]"
-                />
+                <div className="w-12 h-12 rounded-full bg-white p-[1px] overflow-hidden shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] shrink-0">
+                  <img
+                    src={LOGO_IMG}
+                    alt="Sylvan Mini Home Sales logo"
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full rounded-full object-cover scale-[1.15]"
+                  />
+                </div>
                 <div className="leading-tight">
                   <span className="font-[family-name:var(--font-display)] text-white text-lg tracking-tight">
                     Sylvan
