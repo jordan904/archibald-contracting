@@ -423,11 +423,16 @@ export default function SylvanHomes() {
             ))}
             <a
               href="/archibald-contracting/#/contracting"
-              className="relative text-sm text-brand-orange/80 hover:text-brand-orange transition-colors font-medium tracking-wide uppercase group flex items-center gap-1"
+              className="group flex items-center gap-1.5 text-sm text-brand-orange font-bold tracking-wide uppercase
+                         px-4 py-1.5 rounded-full border border-brand-orange/60 bg-brand-orange/15 backdrop-blur-sm
+                         hover:bg-brand-orange/25 hover:border-brand-orange hover:-translate-y-0.5
+                         shadow-[0_0_16px_-2px_rgba(234,88,12,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]
+                         hover:shadow-[0_0_24px_-2px_rgba(234,88,12,0.6),inset_0_1px_0_rgba(255,255,255,0.15)]
+                         transition-all duration-300"
+              style={{ textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}
             >
               Contracting
-              <ArrowRight className="w-3.5 h-3.5" />
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-orange group-hover:w-full transition-all duration-300" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" />
             </a>
             <a
               href="tel:9023381277"
@@ -479,7 +484,11 @@ export default function SylvanHomes() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
-                  className="text-brand-orange/80 hover:text-brand-orange transition-colors font-medium tracking-wide uppercase text-sm flex items-center gap-1"
+                  className="text-brand-orange font-bold tracking-wide uppercase text-sm flex items-center gap-1.5 self-start
+                             px-4 py-2 rounded-full border border-brand-orange/60 bg-brand-orange/15
+                             hover:bg-brand-orange/25 hover:border-brand-orange
+                             shadow-[0_0_16px_-2px_rgba(234,88,12,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]
+                             transition-all duration-300"
                 >
                   Archibald Contracting <ArrowRight className="w-3.5 h-3.5" />
                 </motion.a>
@@ -512,6 +521,17 @@ export default function SylvanHomes() {
 
         <motion.div className="container relative z-10" style={{ opacity: heroOpacity }}>
           <div className="max-w-3xl">
+            <motion.img
+              src={LOGO_IMG}
+              alt="Sylvan Mini Home Sales - Let Us Guide You Home, Est. 2023"
+              width="192"
+              height="192"
+              initial={{ opacity: 0, scale: 0.85, y: -20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              className="block w-36 h-36 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 rounded-full bg-white p-2 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
+            />
+
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -519,17 +539,19 @@ export default function SylvanHomes() {
               className="flex items-center gap-3 mb-6"
             >
               <motion.div
-                className="w-12 h-[2px] bg-brand-forest"
+                className="w-12 h-[2px] bg-brand-forest-light shadow-[0_0_8px_rgba(110,180,140,0.8)]"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 style={{ originX: 0 }}
               />
               <span
-                className="text-brand-forest-light font-[family-name:var(--font-mono)] text-sm tracking-widest uppercase"
-                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.5)" }}
+                className="inline-flex items-center px-4 py-1.5 bg-brand-dark/60 backdrop-blur-md border border-white/20 rounded-full
+                           text-white font-bold font-[family-name:var(--font-mono)] text-xs sm:text-sm tracking-widest uppercase
+                           shadow-[0_4px_20px_-4px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.15)]"
+                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(110,180,140,0.6), 0 2px 8px rgba(0,0,0,0.5)" }}
               >
-                Antigonish & Cape Breton, Nova Scotia
+                Antigonish &amp; Cape Breton, Nova Scotia
               </span>
             </motion.div>
 
