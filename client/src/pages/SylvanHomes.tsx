@@ -522,13 +522,13 @@ export default function SylvanHomes() {
         {/* Centered hero logo - sits below navbar, above the house */}
         <motion.div
           style={{ opacity: heroOpacity }}
-          className="absolute top-24 lg:top-28 left-1/2 -translate-x-1/2 z-20 pointer-events-none"
+          className="absolute top-20 sm:top-20 lg:top-24 left-1/2 -translate-x-1/2 z-20 pointer-events-none"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.85, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-white p-[2px] overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
+            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full bg-white p-[2px] overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
           >
             <img
               src={LOGO_IMG}
