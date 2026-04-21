@@ -34,8 +34,9 @@ import {
 } from "lucide-react";
 
 /* --- Image URLs (Ironwood Homes) --- */
-const HERO_IMG = "/Vista.webp";
-const LOGO_IMG = "/logo.png";
+const BASE = import.meta.env.BASE_URL;
+const HERO_IMG = `${BASE}Vista.webp`;
+const LOGO_IMG = `${BASE}logo.png`;
 const CRAFTSMAN_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/6d9ab074-aef7-4814-a8ea-b946de4c5f79/Craftsman+1.JPG";
 const PORCH_IMG =
@@ -54,7 +55,7 @@ const HERON_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/a8a0ed1f-79e4-4364-a9eb-469967b209d3/Heron_Black+Trim+-+Front+View.jpg";
 const CARLETON_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/c3868b5c-29ba-4084-84c6-a478efbad63e/Carleton+Front+%28Dark+Green_Beige+Trim%29.jpg";
-const KITCHEN2_IMG = "/newkitchen.jpg";
+const KITCHEN2_IMG = `${BASE}newkitchen.jpg`;
 const HUSTON_LIVING_IMG =
   "https://images.squarespace-cdn.com/content/v1/65cbc20fd27c8c72d7692fa0/51365321-76d6-4228-b42e-51680478521f/IW2030+Huston+Great+Room.jpg";
 
