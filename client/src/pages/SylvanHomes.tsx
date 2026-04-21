@@ -530,7 +530,7 @@ export default function SylvanHomes() {
             initial={{ opacity: 0, scale: 0.85, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full bg-white p-[2px] overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
+            className="w-32 h-32 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full bg-white p-[2px] overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
           >
             <img
               src={LOGO_IMG}
@@ -558,8 +558,8 @@ export default function SylvanHomes() {
                 style={{ originX: 0 }}
               />
               <span
-                className="inline-flex items-center px-4 py-1.5 bg-brand-dark/60 backdrop-blur-md border border-white/20 rounded-full
-                           text-white font-bold font-[family-name:var(--font-mono)] text-xs sm:text-sm tracking-widest uppercase
+                className="inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 bg-brand-dark/60 backdrop-blur-md border border-white/20 rounded-full
+                           text-white font-bold font-[family-name:var(--font-mono)] text-[10px] sm:text-sm tracking-wider sm:tracking-widest uppercase
                            shadow-[0_4px_20px_-4px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.15)]"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(110,180,140,0.6), 0 2px 8px rgba(0,0,0,0.5)" }}
               >
