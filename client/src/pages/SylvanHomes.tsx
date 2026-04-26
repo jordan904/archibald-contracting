@@ -392,7 +392,7 @@ export default function SylvanHomes() {
       >
         <div className="container flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-full bg-white p-[1px] overflow-hidden shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.6)] transition-shadow duration-300 shrink-0">
+            <div className="w-11 h-11 rounded-full bg-white/90 backdrop-blur-sm p-[1px] overflow-hidden ring-1 ring-white/20 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.35),0_0_20px_-4px_rgba(110,180,140,0.3)] group-hover:shadow-[0_8px_24px_-2px_rgba(30,80,60,0.5),0_0_24px_-4px_rgba(110,180,140,0.45)] transition-shadow duration-300 shrink-0">
               <img
                 src={LOGO_IMG}
                 alt="Sylvan Mini Home Sales logo"
@@ -530,7 +530,7 @@ export default function SylvanHomes() {
             initial={{ opacity: 0, scale: 0.85, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="w-32 h-32 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full bg-white p-[2px] overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7),0_4px_20px_-4px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.8)]"
+            className="w-32 h-32 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full bg-white/90 backdrop-blur-sm p-[2px] overflow-hidden ring-1 ring-white/30 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.35),0_0_50px_-8px_rgba(110,180,140,0.35),inset_0_1px_0_rgba(255,255,255,0.5)]"
           >
             <img
               src={LOGO_IMG}
@@ -1110,7 +1110,7 @@ export default function SylvanHomes() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-white p-[1px] overflow-hidden shadow-[0_4px_16px_-2px_rgba(30,80,60,0.4)] shrink-0">
+                <div className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm p-[1px] overflow-hidden ring-1 ring-white/20 shadow-[0_4px_16px_-2px_rgba(30,80,60,0.35),0_0_20px_-4px_rgba(110,180,140,0.25)] shrink-0">
                   <img
                     src={LOGO_IMG}
                     alt="Sylvan Mini Home Sales logo"
