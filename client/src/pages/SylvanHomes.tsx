@@ -32,6 +32,7 @@ import {
   Hammer,
   CheckCircle,
 } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 /* --- Image URLs (Ironwood Homes) --- */
 const BASE = import.meta.env.BASE_URL;
@@ -1100,6 +1101,41 @@ export default function SylvanHomes() {
               </div>
             </FadeUp>
           </div>
+        </div>
+      </section>
+
+      {/* --- CONTACT FORM --- */}
+      <section className="py-20 lg:py-28 bg-brand-cream relative">
+        <div className="container max-w-3xl">
+          <FadeUp>
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <motion.div
+                className="w-8 h-[2px] bg-brand-forest"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                style={{ originX: 0 }}
+              />
+              <span className="text-brand-forest font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
+                Send a Message
+              </span>
+            </div>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl lg:text-5xl text-brand-charcoal text-center mb-4">
+              Request More Information
+            </h2>
+            <p className="text-muted-foreground text-center text-lg mb-12 max-w-2xl mx-auto">
+              Tell us a bit about what you're looking for and we'll be in touch with available models, pricing, and next steps.
+            </p>
+          </FadeUp>
+
+          <FadeUp delay={0.1}>
+            <ContactForm
+              theme="forest"
+              placeholder="Tell us about your home goals, timeline, budget, or any questions about specific Ironwood models."
+              buttonLabel="Send Inquiry"
+            />
+          </FadeUp>
         </div>
       </section>
 

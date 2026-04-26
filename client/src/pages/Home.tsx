@@ -38,6 +38,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 /* ─── Image URLs ─── */
 const HERO_IMG =
@@ -1086,6 +1087,41 @@ export default function Home() {
               </div>
             </FadeUp>
           </div>
+        </div>
+      </section>
+
+      {/* ─── CONTACT FORM ─── */}
+      <section className="py-20 lg:py-28 bg-brand-cream relative">
+        <div className="container max-w-3xl">
+          <FadeUp>
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <motion.div
+                className="w-8 h-[2px] bg-brand-orange"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                style={{ originX: 0 }}
+              />
+              <span className="text-brand-orange font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
+                Send a Message
+              </span>
+            </div>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl lg:text-5xl text-brand-charcoal text-center mb-4">
+              Request a Free Estimate
+            </h2>
+            <p className="text-muted-foreground text-center text-lg mb-12 max-w-2xl mx-auto">
+              Tell us about your project and we'll get back to you with a quote and recommended next steps.
+            </p>
+          </FadeUp>
+
+          <FadeUp delay={0.1}>
+            <ContactForm
+              theme="orange"
+              placeholder="Tell us about the scope of work, location, timeline, and any details we should know."
+              buttonLabel="Request Estimate"
+            />
+          </FadeUp>
         </div>
       </section>
 
