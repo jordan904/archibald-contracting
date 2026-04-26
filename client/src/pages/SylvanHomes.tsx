@@ -559,9 +559,9 @@ export default function SylvanHomes() {
               />
               <span
                 className="inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 bg-brand-dark/60 backdrop-blur-md border border-white/20 rounded-full
-                           text-white font-bold font-[family-name:var(--font-mono)] text-[10px] sm:text-sm tracking-wider sm:tracking-widest uppercase
+                           text-white font-medium font-[family-name:var(--font-mono)] text-[10px] sm:text-sm tracking-wider sm:tracking-widest uppercase
                            shadow-[0_4px_20px_-4px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.15)]"
-                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(110,180,140,0.6), 0 2px 8px rgba(0,0,0,0.5)" }}
+                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.85), 0 0 8px rgba(0,0,0,0.45)" }}
               >
                 Antigonish &amp; Cape Breton, Nova Scotia
               </span>
